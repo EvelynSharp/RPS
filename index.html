@@ -4,37 +4,68 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface:100,400,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,700" rel="stylesheet">
+
+
 </head>
-<body>
-  <h1>Rock Paper Scissors</h1>
-
+<body class="container">
+  <header class="center-align">
+    <h2>Rock Paper Scissors</h2>
+  </header>
   <input id="announcement" name="announcement" readonly/>
-  <h3>Player1 Please Choose</h3>
-  <button class="p1Btn" name="Rock">Rock</button>
-  <button class="p1Btn" name="Paper">Paper</button>
-  <button class="p1Btn" name="Scissors">Scissors</button>
+  <div class="row">
+    <div class="col l3 offset-l7 right-align">
+      <button class="playBtn" id="startGame">Play</button>
+    </div class="col l1 ">
+    <div>
+      <button class="newBtn" id="newGame">New Game</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col l4">
+      <h4 class="center-align">Player1</h4>
+      <div class="statsContainer">
+        <h5>Choice:<span id="player1Choice"></span></h5>
+        <h5>Wins:<span id="p1WinCount"></span></h5>
+        <h5>Win Rate:<span id="p1WinRate"></span></h5>
+      </div>
+      <div class="center-align">
+        <div class="btnContainer">
+          <button class="p1Btn" name="Rock">Rock</button>
+          <button class="p1Btn" name="Paper">Paper</button>
+          <button class="p1Btn" name="Scissors">Scissors</button>
+        </div>
+      </div>
+    </div>
+    <div class="col l4">
+      <h4 class="center-align">Player2</h4>
+      <div class="statsContainer">
+        <h5>Choice:<span id="player2Choice"></span></h5>
+        <h5>Wins:<span id="p2WinCount"></span></h5>
+        <h5>Win Rate:<span id="p2WinRate"></span></h5>
+      </div>
+      <div class="center-align">
+        <div class="btnContainer">
+          <button class="p2Btn" name="Rock">Rock</button>
+          <button class="p2Btn" name="Paper">Paper</button>
+          <button class="p2Btn" name="Scissors">Scissors</button>
+        </div>
+      </div>
+    </div>
+    <div class="col l4">
+      <h4 class="center-align">Computer</h4>
+      <div class="statsContainer">
+        <h5>Choice:<span id="computerChoice"></span></h5>
+        <h5>Wins:<span id="compWinCount"></span></h5>
+        <h5>Win Rate:<span id="compWinRate"></span></h5>
+      </div>
+    </div>
 
-  <h4>Player1 Choice:<span id="player1Choice"></span></h4>
-  <h4>Player1 wins:<span id="p1WinCount"></span></h4>
-  <h4>Player1 Win Rate:<span id="p1WinRate"></span></h4>
-
-  <h3>Player2 Please Choose</h3>
-  <button class="p2Btn" name="Rock">Rock</button>
-  <button class="p2Btn" name="Paper">Paper</button>
-  <button class="p2Btn" name="Scissors">Scissors</button>
-
-  <h4>Player2 Choice:<span id="player2Choice"></span></h4>
-  <h4>Player2 wins:<span id="p2WinCount"></span></h4>
-  <h4>Player2 Win Rate:<span id="p2WinRate"></span></h4>
-
-  <button id="startGame">Play</button>
-  <h4>Computer Choice:<span id="computerChoice"></span></h4>
-  <h4>Computer wins:<span id="compWinCount"></span></h4>
-  <h4>Computer Win Rate:<span id="compWinRate"></span></h4>
-
-  <button id="newGame">New Game</button>
-
+  <div>
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script type='text/javascript' src='main.js'></script>
 </body>

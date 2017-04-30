@@ -1,0 +1,166 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h2{
+  font-family: "Abril Fatface",Georgia, serif;
+}
+
+body{
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+h5 {
+  font-size: 1em;
+  padding-left: 1em;
+}
+
+h4 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border:1px solid #e0e0e0;
+  font-family:"Raleway", Arial, sans-serif;
+}
+
+div, span {
+  border: 1px solid red;
+}
+
+span{
+  float: right;
+  font-size: 0.85em;
+}
+
+.statsContainer{
+  margin:2em 0.8em 2em 0;
+}
+
+.btnContainer{
+  margin-bottom: 2em;
+}
+
+.p1Btn, .p2Btn {
+  display: inline-block;
+  width: 5em;
+  font-weight: bold;
+	font-size: 0.9em;
+	padding:0.35em 0.5em;
+  margin: 0.5em 0.3em;
+  border-radius:5%;
+  background: white;
+  border: 2px solid #ad4e9d;
+  -webkit-transition: all 0.2s ease;
+		 -moz-transition: all 0.2s ease;
+	    -ms-transition: all 0.2s ease;
+	     -o-transition: all 0.2s ease;
+	        transition: all 0.2s ease;
+}
+
+.p1Btn:hover,.p1Btn:active,.p1Btn:focus,
+.p2Btn:active, .p2Btn:hover, .p2Btn:focus {
+  border: 2px solid #ad4e9d;
+  background-color: #ad4e9d;
+  color: white;
+  cursor:pointer;
+}
+
+/*how to fix button being green after click*/
+
+.playBtn, .newBtn {
+  display: inline-block;
+  border-radius: 50%;
+  margin: 5% 0 10% 0;
+  font-weight: bold;
+  border: none;
+  -webkit-transition: all 0.2s ease;
+     -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+       -o-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+.playBtn {
+  height: 150px;
+  width: 150px;
+  font-size: 50px;
+  color: white;
+  background-color:#64b5f6 ;
+}
+
+.playBtn:hover, .playBtn:focus{
+  background-color: #1e88e5;
+  color: #e3f2fd;
+}
+
+.newBtn {
+  margin-left: 2%;
+  height: 70px;
+  width: 70px;
+  font-size: 1.2em;
+  color: white;
+  background-color:#ab47bc ;
+}
+
+.newBtn:hover, .newBtn:focus {
+  background-color: #8e24aa;
+  color: #f3e5f5;
+}
+
+#announcement {
+  display: block;
+  border: 1px solid #e0e0e0;
+  font-size: 1.5em;
+  line-height: 2em;
+  min-height: 3em;
+  padding: 0 1em;
+  text-align: center;
+  width: 60%;
+
+  margin: 3em auto;
+}
