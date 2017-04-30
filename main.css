@@ -67,6 +67,30 @@ h4 {
   font-family:"Raleway", Arial, sans-serif;
 }
 
+#player1Name, #player2Name, #computerPlayer {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family:"Raleway", Arial, sans-serif;
+  font-size: 2.2em;
+  border:none;
+  width: 70%;
+}
+
+#player1Name, #player2Name {
+  -webkit-transition: all 0.2s ease;
+     -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+       -o-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+#player1Name:hover, #player2Name:hover,
+#player1Name:focus, #player2Name:focus,
+#player1Name:active, #player2Name:active {
+  border-bottom: 1px solid #4db6ac;
+}
+
 
 span{
   float: right;

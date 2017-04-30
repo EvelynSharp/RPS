@@ -10,27 +10,52 @@ $(document).ready(function(){
   var p2Stats = { pName: 'Player2', currChoice: null, gameCount:0, winCount:0, winRate:0};
   var compStats = { pName: 'Computer', currChoice: null, gameCount:0, winCount:0, winRate:0};
 
+  //load default player names
+  $('#player1Name').val(p1Stats['pName']);
+  $('#player2Name').val(p2Stats['pName']);
+
+
+  //allow updating player names
+  $('.customPName').keyup(function(){
+    var whichPlayer = $(this).attr('id');
+    if(whichPlayer == 'player1Name'){
+        p1Stats['pName']=$('#player1Name').val();
+    } else if (whichPlayer == 'player2Name'){
+        p2Stats['pName']=$('#player2Name').val();
+    }
+  });
+
+  $('.customPName').mouseleave(function(){
+    if (p1Stats['pName'] == ''){
+        p1Stats['pName'] ='Player1';
+    }
+    if (p2Stats['pName'] =='') {
+        p2Stats['pName'] ='Player2';
+    }
+    $('#player1Name').val(p1Stats['pName']);
+    $('#player2Name').val(p2Stats['pName']);
+  });
 
 // record player choices
   $('button').click( function(){
     var choice = $(this).html();
     var playerBtn = $(this).attr('class');
     if(playerBtn == 'p1Btn') {
-      p1Stats['currChoice'] = choice;
-      $('#player1Choice').html(' '+p1Stats['currChoice']);
+        p1Stats['currChoice'] = choice;
+        $('#player1Choice').html(' '+p1Stats['currChoice']);
       // if the other btn has no new choice made, clear previous choice display
-      if (p2Stats['currChoice']== null){
+        if (p2Stats['currChoice']== null){
           $('#player2Choice').html('');
-      }
+        }
       //clear the computer choice field from last round
       $('#computerChoice').html('');
     } else if (playerBtn == 'p2Btn') {
-      p2Stats['currChoice'] = choice;
-      $('#player2Choice').html(' '+p2Stats['currChoice']);
-      if (p1Stats['currChoice']== null){
+        p2Stats['currChoice'] = choice;
+        $('#player2Choice').html(' '+p2Stats['currChoice']);
+        if (p1Stats['currChoice']== null){
           $('#player1Choice').html('');
-      }
-      $('#computerChoice').html('');
+        }
+        $('#computerChoice').html('');
     }
   });
   // // how to clear previous game's choices at the beginning of a new round?
@@ -112,8 +137,12 @@ $(document).ready(function(){
     $('#p1WinCount').html(' '+p1Stats['winCount']);
     $('#p2WinCount').html(' '+p2Stats['winCount']);
     $('#compWinCount').html(' '+compStats['winCount']);
-    p1Stats['winRate'] = Math.round((p1Stats['winCount']/p1Stats['gameCount'])*10000)/100;
-    p2Stats['winRate'] = Math.round((p2Stats['winCount']/p2Stats['gameCount'])*10000)/100;
+    if(p1Stats['winCount'] !== 0){
+      p1Stats['winRate'] = Math.round((p1Stats['winCount']/p1Stats['gameCount'])*10000)/100;
+    }
+    if(p2Stats['winCount'] !== 0){
+      p2Stats['winRate'] = Math.round((p2Stats['winCount']/p2Stats['gameCount'])*10000)/100;
+    }
     compStats['winRate'] = Math.round((compStats['winCount']/compStats['gameCount'])*10000)/100;
     $('#p1WinRate').html(' '+p1Stats['winRate']+'%');
     $('#p2WinRate').html(' '+p2Stats['winRate']+'%');
