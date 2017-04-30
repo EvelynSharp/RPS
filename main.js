@@ -53,6 +53,7 @@ $(document).ready(function(){
     if(!p1Stats['currChoice'] && !p2Stats['currChoice']){
         //if play button is hit without any player choice input
         $('#announcement').val('Players Please Choose');
+        return;
     } else if (!p1Stats['currChoice']) {
         // if player 1 did not choose
         p2Stats['gameCount']++;
