@@ -64,13 +64,9 @@ h4 {
   display: block;
   margin: 0 auto;
   text-align: center;
-  border:1px solid #e0e0e0;
   font-family:"Raleway", Arial, sans-serif;
 }
 
-div, span {
-  border: 1px solid red;
-}
 
 span{
   float: right;
@@ -80,7 +76,9 @@ span{
 .statsContainer{
   margin:2em 0.8em 2em 0;
 }
-
+.playerSection{
+  border-right: 1px solid #e0e0e0;
+}
 .btnContainer{
   margin-bottom: 2em;
 }
@@ -161,6 +159,5 @@ span{
   padding: 0 1em;
   text-align: center;
   width: 60%;
-
-  margin: 3em auto;
+  margin: 2.5em auto 1em auto;
 }
