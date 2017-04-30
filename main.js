@@ -51,8 +51,10 @@ $(document).ready(function(){
     var finalWinner;
     var winner;
     if(!p1Stats['currChoice'] && !p2Stats['currChoice']){
+        //if play button is hit without any player choice input
         $('#announcement').val('Players Please Choose');
     } else if (!p1Stats['currChoice']) {
+        // if player 1 did not choose
         p2Stats['gameCount']++;
         computerChoose();
         winner = basicWin(p2Stats['currChoice'],compStats['currChoice']);
@@ -66,6 +68,7 @@ $(document).ready(function(){
             finalWinner = 'None';
         }
     } else if (!p2Stats['currChoice']) {
+        // if player 2 did not choose
         p1Stats['gameCount']++;
         computerChoose();
         winner=basicWin(p1Stats['currChoice'],compStats['currChoice']);
@@ -79,19 +82,19 @@ $(document).ready(function(){
             finalWinner = 'None';
         }
     } else {
+        // if both players are playing
         p1Stats['gameCount']++;
         p2Stats['gameCount']++;
         computerChoose();
         if (p1Stats['currChoice'] !== p2Stats['currChoice'] && p1Stats['currChoice'] !== compStats['currChoice'] && p2Stats['currChoice'] !==compStats['currChoice']){
-            finalWinner = 'None';
+            finalWinner = 'None'; // rock, paper, scissor situation
         } else if (p1Stats['currChoice'] === p2Stats['currChoice'] && p1Stats['currChoice'] === compStats['currChoice']) {
-            finalWinner = 'None';
+            finalWinner = 'None'; // if all players made the same choice
         } else {
             finalWinner = multiPlayer(p1Stats['currChoice'],p2Stats['currChoice'],compStats['currChoice']);
-
         }
     }
-    // consider if player 1 played, then player2  want to join, player 1's value need to be wiped away first
+    // below announce game results
     if (finalWinner==='None'){
         $('#announcement').val('Nobody has won this round')
     } else {
@@ -188,7 +191,7 @@ $(document).ready(function(){
 
 
 
-
+// basic function to determine winner between two players
   function basicWin(p1, p2) {
     var winner;
     if (p1==='Rock' && p2 ==='Paper') {
