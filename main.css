@@ -67,6 +67,22 @@ h4 {
   font-family:"Raleway", Arial, sans-serif;
 }
 
+.gameRules {
+  display: inline-block;
+  font-style: italic;
+  margin-top: 2em;
+  margin-left: 0.5em;
+  line-height: 2em;
+  color:#616161;
+  text-indent: 15px;
+  padding-right: 10px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border: 1px solid #e0e0e0;
+}
+
+
+
 #player1Name, #player2Name, #computerPlayer {
   display: block;
   margin: 0 auto;
@@ -89,6 +105,7 @@ h4 {
 #player1Name:focus, #player2Name:focus,
 #player1Name:active, #player2Name:active {
   border-bottom: 1px solid #4db6ac;
+
 }
 
 
@@ -97,8 +114,13 @@ span{
   font-size: 0.85em;
 }
 
+
+.gameRules {
+  display:inline-block;
+}
+
 .statsContainer{
-  margin:2em 0.8em 2em 0;
+  margin:1em 0.8em 2em 0;
 }
 .playerSection{
   border-right: 1px solid #e0e0e0;
