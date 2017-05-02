@@ -77,7 +77,7 @@ $(document).ready(function(){
     var winner;
     if(!p1Stats['currChoice'] && !p2Stats['currChoice']){
         //if play button is hit without any player choice input
-        $('#announcement').val('Players Please Choose');
+        $('#announcement').html('Players Please Choose');
         return;
     } else if (!p1Stats['currChoice']) {
         // if player 1 did not choose
@@ -122,9 +122,9 @@ $(document).ready(function(){
     }
     // below announce game results
     if (finalWinner==='None'){
-        $('#announcement').val('Nobody has won this round')
+        $('#announcement').html('Nobody has won this round')
     } else {
-        $('#announcement').val('Winner\(s\) of this round: '+finalWinner);
+        $('#announcement').html('Winner\(s\) of this round: '+finalWinner);
     }
     cleanCurrChoice();
     loadWinStats();
@@ -161,7 +161,7 @@ $(document).ready(function(){
   //clear old data for new game
   $('#newGame').click(function(){
     $('span').html('');
-    $('#announcement').val('');
+    $('#announcement').html('');
     p1Stats = { pName: 'Player1', currChoice: null, gameCount:0, winCount:0, winRate:0};
     p2Stats = { pName: 'Player2', currChoice: null, gameCount:0, winCount:0, winRate:0};
     compStats = { pName: 'Computer', currChoice: null, gameCount:0, winCount:0, winRate:0};
